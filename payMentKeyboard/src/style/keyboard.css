@@ -1,0 +1,82 @@
+.keyboard {
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fff;
+  }
+  .keyboard_numbers {
+    width: 80%;
+    height: 100%;
+  }
+  .keyboard_numbers_top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: repeat(3, 30px);
+  }
+  .keyboard_numbers_bottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(1, 30px);
+  }
+  .keyboard_numbers_bottom_item {
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+  }
+  .keyboard_numbers_item {
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .keyboard_options {
+    min-width: 0;
+    flex: 1 0 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 29px 91px;
+  }
+  .keyboard_options_item {
+    box-sizing: border-box;
+    line-height: 29px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .keyboard_options_item .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .keyboard_options_item:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .keyboard_options_item:last-of-type {
+    border-top: 1px solid #eee;
+    line-height: 91px;
+    font-size: 15px;
+  }
+  .keyboard_options_item.disable {
+    background: #eee;
+    color: #c4c7ce;
+    cursor: not-allowed;
+  }
+  
+  .keyboard_options_item.able {
+    background: #1378ff;
+    color: #fff;
+  }

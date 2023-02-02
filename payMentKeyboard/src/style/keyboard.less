@@ -1,0 +1,78 @@
+.keyboard {
+  user-select: none;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  height: 120px;
+  // background: red;
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #fff;
+  &_numbers {
+    width: 80%;
+    height: 100%;
+    &_top {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 3fr);
+      grid-template-rows: repeat(3, 30px);
+    }
+    &_bottom {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(1, 30px);
+      &_item {
+        cursor: pointer;
+        text-align: center;
+        line-height: 30px;
+        border-right: 1px solid #eee;
+        box-sizing: border-box;
+      }
+    }
+    &_item {
+      text-align: center;
+      line-height: 30px;
+      border-bottom: 1px solid #eee;
+      border-right: 1px solid #eee;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+  }
+  &_options {
+    min-width: 0;
+    flex: 1 0 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 29px 91px;
+    &_item {
+      box-sizing: border-box;
+      line-height: 29px;
+      text-align: center;
+      cursor: pointer;
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+      &:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:last-of-type {
+        border-top: 1px solid #eee;
+        line-height: 91px;
+        font-size: 15px;
+      }
+      &.disable {
+        background: #eee;
+        color: #c4c7ce;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+h1,
+p {
+  font-family: Lato;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.numbers {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.numbers-info {
+  font-size: 24px;
+  font-weight: bold;
+  padding-right: 25px;
+  position: relative;
+}
+.flag {
+  font-size: 20px;
+  margin-right: 6px;
+}
+.numbers-position, .numbers-position-show {
+  color: #c4c7ce;
+  padding-left: 28px;
+  position: relative;
+  height: 22px;
+}
+
+.numbers-position-show::before {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 18px;
+  background: #c4c7ce;
+  position: absolute;
+  left: 20px;
+  top: 2px;
+}
+.numbers-desc {
+  margin-top: 6px;
+  color: gainsboro;
+  font-size: 13px;
+}
+.red-desc {
+  color: #f00;
+}
+.cleanIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2px;
+  bottom: 6px;
+}
