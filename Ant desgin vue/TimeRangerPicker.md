@@ -49,7 +49,7 @@ export default {
       // NOTICE：timeRangerPicker 返回的是一个Array数组, 提交表单字段时候需要问清楚是不是两个字段。
       
       // 后端需要两个字段需要对Array数组进行拆分，例如：时间段是开始时间字段是: StartTime, 结束时间是：endTime
-      let formData = Object({}, this.form); // 最终需要给后端的数据
+      let formData = Object.assign({}, this.form); // 最终需要给后端的数据
       if (this.form.rangeDate && this.form.rangeDate.length) { // NOTICE：这里只是示例
         // 处理数据
         const [startTime, endTime] = this.form.rangeDate;
@@ -79,7 +79,7 @@ export default {
       // NOTICE：timeRangerPicker 返回的是一个Array数组, 提交表单字段时候需要问清楚是不是两个字段。
 
       // 后端需要两个字段需要对Array数组进行拆分，例如：时间段是开始时间字段是: StartTime, 结束时间是：endTime
-      let formData = Object({}, this.form); // 最终需要给后端的数据
+      let formData = Object.assign({}, this.form); // 最终需要给后端的数据
       if (this.form.rangeDate && this.form.rangeDate.length) { // NOTICE：这里只是示例
         // 处理数据
         const [startTime, endTime] = this.form.rangeDate;
